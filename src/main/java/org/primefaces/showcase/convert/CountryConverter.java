@@ -4,6 +4,7 @@ import org.primefaces.showcase.domain.Country;
 import org.primefaces.showcase.service.CountryService;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -12,8 +13,9 @@ import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+@ManagedBean(name = "countryConverter")
 @Named
-@FacesConverter(value = "countryConverter", managed = true)
+@FacesConverter(value = "countryConverter")
 public class CountryConverter implements Converter {
 
     @Inject

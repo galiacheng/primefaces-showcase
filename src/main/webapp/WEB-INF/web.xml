@@ -80,9 +80,15 @@
     	<param-value>false</param-value>
     </context-param>
 
-    <listener>
-        <listener-class>org.apache.webbeans.servlet.WebBeansConfigurationListener</listener-class>
-    </listener>
+    <context-param>
+        <param-name>org.apache.myfaces.SUPPORT_MANAGED_BEANS</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.annotation.USE_CDI_FOR_ANNOTATION_SCANNING</param-name>
+        <param-value>true</param-value>
+    </context-param> 
+    
     <listener>
         <listener-class>${jsfListener}</listener-class>
     </listener>

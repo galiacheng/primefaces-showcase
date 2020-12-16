@@ -20,6 +20,7 @@ import org.primefaces.showcase.service.ThemeService;
 
 import javax.enterprise.inject.spi.CDI;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -28,8 +29,9 @@ import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+@ManagedBean(name = "themeConverter")
 @Named
-@FacesConverter(value = "themeConverter", managed = true)
+@FacesConverter(value = "themeConverter")
 public class ThemeConverter implements Converter {
 
     @Inject private ThemeService themeService;
